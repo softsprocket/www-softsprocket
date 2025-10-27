@@ -5,14 +5,19 @@ import { Footer } from "./modules/footer.mjs";
 import { H1 } from "./modules/headings.mjs";
 import { P } from "./modules/p.mjs";
 import { Button } from "./modules/button.mjs";
+import { A } from "./modules/a.mjs";
 
 onload = () => {
     console.log("Softsprocket is loading...");
     const softsprocket = new SoftSprocket("app");
 
-    let headerImage = `<a href="/" aria-label="SoftSprocket Homepage">
-            <!-- Paste the SVG code here -->
-            <svg class="logo-banner" width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+    // Populate the Header with a logo banner
+    let a = new A();
+    softsprocket.headerElement.appendChild(a);
+    a.setAttribute("href", "/");
+    a.setAttribute("aria-label", "SoftSprocket Homepage");
+
+    let headerImage = `<svg class="logo-banner" width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
               <title id="title">SoftSprocket Logo Banner</title>
               <desc id="desc">A stylized cascade of stars next to the word SoftSprocket.</desc>
               <style>
@@ -39,10 +44,10 @@ onload = () => {
                 <tspan class="text-dark" font-weight="300">Soft</tspan>
                 <tspan class="accent-pri" font-weight="700">Sprocket</tspan>
               </text>
-            </svg>
-        </a>`;
+            </svg>`;
 
-    softsprocket.headerElement.innerHTML = headerImage;
+    a.innerHTML = headerImage;
+
     // Populate the Aside with a card
     let div = new Div();
     div.classList.add("card");
