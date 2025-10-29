@@ -21,10 +21,11 @@ body {
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  padding: 2rem;
+  padding: 0;
   display: grid;
   place-items: center;
   min-height: 100vh;
+  width: 100%;
 }
 
 /* Card styling */
@@ -40,6 +41,7 @@ header {
   background-color: var(--color-text);
   color: var(--color-background);
   padding: 1.5rem 2rem;
+  width: 100%;
 }
 
 h1 {
@@ -96,4 +98,17 @@ button:hover {
 .highlight-slate { background-color: var(--color-text); color: var(--color-background); }
 .highlight-deep-sea { background-color: var(--color-primary); color: var(--color-background); }
 .highlight-ochre { background-color: var(--color-accent); color: var(--color-text); }
+
+.logo-banner {
+  background-color: var(--color-text); /* Slate */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.logo-banner-text {
+  color: var(--color-accent); /* Ochre */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
 

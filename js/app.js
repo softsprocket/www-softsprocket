@@ -12,41 +12,12 @@ onload = () => {
     const softsprocket = new SoftSprocket("app");
 
     // Populate the Header with a logo banner
-    let a = new A();
-    softsprocket.headerElement.appendChild(a);
-    a.setAttribute("href", "/");
-    a.setAttribute("aria-label", "SoftSprocket Homepage");
+    softsprocket.headerElement.className = "logo-banner";
 
-    let headerImage = `<svg class="logo-banner" width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
-              <title id="title">SoftSprocket Logo Banner</title>
-              <desc id="desc">A stylized cascade of stars next to the word SoftSprocket.</desc>
-              <style>
-                .bg         { fill: #F7FAFC; }
-                .text-dark  { fill: #2D3748; }
-                .accent-pri { fill: #00A9E0; }
-                .accent-sec { fill: #76D7C4; }
-                .accent-ter { fill: #F5A623; }
-              </style>
-              <defs>
-                <symbol id="star-shape" viewBox="-10 -10 20 20">
-                  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" />
-                </symbol>
-              </defs>
-              <rect width="100%" height="100%" class="bg" />
-              <g id="star-cascade">
-                <use href="#star-shape" x="50" y="50" width="30" height="30" class="accent-pri" opacity="1" transform="rotate(15 50 50)"/>
-                <use href="#star-shape" x="85" y="35" width="22" height="22" class="accent-sec" opacity="0.9" transform="rotate(-10 85 35)"/>
-                <use href="#star-shape" x="25" y="28" width="18" height="18" class="accent-ter" opacity="0.95" transform="rotate(25 25 28)"/>
-                <use href="#star-shape" x="100" y="70" width="15" height="15" class="accent-pri" opacity="0.7"/>
-                <use href="#star-shape" x="20" y="75" width="12" height="12" class="accent-sec" opacity="0.8"/>
-              </g>
-              <text x="135" y="55" font-family="'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" font-size="36" dominant-baseline="middle">
-                <tspan class="text-dark" font-weight="300">Soft</tspan>
-                <tspan class="accent-pri" font-weight="700">Sprocket</tspan>
-              </text>
-            </svg>`;
-
-    a.innerHTML = headerImage;
+    let h1Banner = new H1();
+    h1Banner.className = "banner-text";
+    h1Banner.textContent = "SoftSprocket";
+    softsprocket.headerElement.appendChild(h1Banner);
 
     // Populate the Aside with a card
     let div = new Div();
