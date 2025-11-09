@@ -1,4 +1,5 @@
 import { SoftSprocket } from "./softsprocket.mjs";
+import { Content } from "./content.mjs";
 
 onload = () => {
     console.log("Softsprocket is loading...");
@@ -11,6 +12,11 @@ onload = () => {
     h1Banner.className = "banner-text";
     h1Banner.textContent = "SoftSprocket";
     softsprocket.headerElement.appendChild(h1Banner);
+
+    // Populate the Main with content
+    let mainContent = new Content("/content/home-main.html");
+    mainContent.className = "main-content";
+    softsprocket.mainElement.appendChild(mainContent);
 
     // Populate the Aside with a card
     let div = document.createElement("div");
